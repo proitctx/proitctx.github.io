@@ -34,7 +34,9 @@ body{
 .btn{display:inline-block;padding:.8rem 1rem;border-radius:10px;text-decoration:none;font-weight:800;border:1px solid var(--line)}
 .btn.primary{background:var(--accent);color:#07140e;border-color:transparent;box-shadow:var(--shadow)}
 .btn.ghost{color:var(--text);border-color:var(--line)}
-.trust{display:flex;gap:1rem;flex-wrap:wrap;color:var(--muted);list-style:'✓ ';padding-left:1rem}
+.trust{display:flex;gap:.5rem;flex-wrap:wrap;color:var(--muted);padding:0;margin-top:.8rem;list-style:none}
+.trust li{display:flex;align-items:center;gap:.4rem;background:#0b1219;border:1px solid var(--line);border-radius:999px;padding:.35rem .6rem;font-weight:700}
+.trust li::before{content:'✓';color:var(--accent);font-weight:800}
 .hero-art img{width:100%;height:auto;filter:drop-shadow(0 12px 30px rgba(0,0,0,.35));}
 .section{padding:3rem 0}
 .section h2{font-size:clamp(1.4rem,1rem + 1.6vw,2.1rem);margin:0 0 1rem}
