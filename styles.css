@@ -61,3 +61,16 @@ body{
 .contact button{margin-top:.6rem}
 .site-footer{border-top:1px solid var(--line);padding:1.4rem 0;color:var(--muted);text-align:center}
 @media (max-width: 860px){.hero{grid-template-columns:1fr}}
+
+/* Mobile nav */
+.nav-toggle{display:none}
+@media (max-width: 860px){
+  .nav{position:relative}
+  .nav-toggle{display:inline-grid;gap:4px;align-items:center;justify-items:center;background:transparent;border:0;padding:.4rem;margin-left:auto;cursor:pointer}
+  .nav-toggle .bar{display:block;width:24px;height:2px;background:var(--text);border-radius:2px}
+  .nav nav{position:absolute;right:0;top:100%;background:var(--panel);border:1px solid var(--line);border-radius:10px;box-shadow:var(--shadow);display:grid;gap:.2rem;padding:.6rem;min-width:180px;transform-origin:top right;transform:scale(.98);opacity:0;pointer-events:none}
+  .nav nav a{padding:.5rem .6rem;border-radius:8px}
+  .nav nav a:hover{background:#0b1219}
+  .nav nav .cta{border-color:var(--accent)}
+  .nav nav.open{opacity:1;pointer-events:auto;transform:scale(1)}
+}

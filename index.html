@@ -22,7 +22,12 @@
       <img src="assets/ProIT-Logo-C.png" alt="Pro IT of Central Texas logo" height="36">
       <span>Pro IT of Central Texas</span>
     </a>
-    <nav>
+    <button class="nav-toggle" aria-controls="site-nav" aria-expanded="false" aria-label="Toggle menu">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+    <nav id="site-nav">
       <a href="#services">Automation</a>
       <a href="#support">IT Support</a>
       <a href="#process">Process</a>
@@ -30,6 +35,7 @@
       <a href="#contact" class="cta">Contact</a>
     </nav>
   </div>
+
 </header>
 
 <main id="home">
@@ -137,7 +143,6 @@
         </ul>
       </article>
     </div>
-    <p class="note">We fix computers and networks <em>and</em> automate business systems — the rare combo most shops don’t offer.</p>
   </section>
 
   <section id="process" class="container section">
@@ -255,6 +260,24 @@
 
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();
+  const nav = document.getElementById('site-nav');
+  const toggle = document.querySelector('.nav-toggle');
+  if(toggle && nav){
+    toggle.addEventListener('click', () => {
+      const isOpen = nav.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', String(isOpen));
+    });
+    nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+      nav.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+    }));
+    document.addEventListener('keydown', (e) => {
+      if(e.key === 'Escape'){
+        nav.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+  }
 </script>
 </body>
 </html>
