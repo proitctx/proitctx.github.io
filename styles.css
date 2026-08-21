@@ -148,7 +148,10 @@ a { color: inherit; }
   top: 7.5%;
   left: 12.6%;
   width: 67%;
-  height: auto;
+  aspect-ratio: 530 / 158;
+  background: var(--ink);
+  -webkit-mask: url("assets/ProIT-Logo-C.png") center / contain no-repeat;
+  mask: url("assets/ProIT-Logo-C.png") center / contain no-repeat;
 }
 
 .main-content {
