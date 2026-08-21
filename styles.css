@@ -456,14 +456,7 @@ h1 em {
     line-height: 0.8;
   }
 
-  .telemetry {
-    width: 100%;
-    max-width: 24rem;
-  }
-
-  .orbit-mark { display: none; }
-
-  .readouts { margin-top: 0.9rem; }
+  .telemetry { display: none; }
 
   .footer .coordinates { display: none; }
 }
